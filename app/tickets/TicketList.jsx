@@ -16,6 +16,12 @@ async function TicketList() {
   const tickets = await getTickets();
   return (
     <>
+      <Link
+        className="bg-blue-700 text-white text-center"
+        href="/tickets/create"
+      >
+        Add New form
+      </Link>
       {tickets.map((ticket) => (
         <div key={ticket.id} className="card my-5">
           <Link href={`/tickets/${ticket.id}`}>
